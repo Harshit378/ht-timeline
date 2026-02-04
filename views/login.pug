@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .login-container
+    .login-box
+      h1.login-title Login
+      form.login-form(method='post', action='/login')
+        .form-group
+          label.form-label(for='username') Username
+          input.form-input(type='text', id='username', name='username', placeholder='Enter your username', required)
+        .form-group
+          label.form-label(for='password') Password
+          input.form-input(type='password', id='password', name='password', placeholder='Enter your password', required)
+        button.login-btn(type='submit') Login
+      .register-link
+        p Don't have an account? 
+          a(href='/register') Register here
